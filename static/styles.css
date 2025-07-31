@@ -1,1 +1,83 @@
+:root {
+  --bg-color: white;
+  --text-color: black;
+  --sidebar-bg: #f0f0f0;
+  --button-bg: #e0e0e0;
+  --button-text: black;
+}
 
+body[data-theme="dark"] {
+  --bg-color: #121212;
+  --text-color: white;
+  --sidebar-bg: #333;
+  --button-bg: #444;
+  --button-text: white;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: Arial, sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.container {
+  display: flex;
+}
+
+.sidebar {
+  width: 250px;
+  padding: 10px;
+  background-color: var(--sidebar-bg);
+}
+
+main {
+  flex: 1;
+  padding: 10px;
+}
+
+.chat {
+  display: flex;
+  flex-direction: column;
+}
+
+#conversation {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.message {
+  margin-bottom: 10px;
+}
+
+.input-area {
+  display: flex;
+}
+
+#prompt {
+  flex: 1;
+  padding: 5px;
+}
+
+button {
+  padding: 5px 10px;
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  cursor: pointer;
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  overflow-x: auto;
+}
+
+body[data-theme="dark"] pre {
+  background-color: #222;
+}
